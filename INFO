@@ -1,11 +1,11 @@
 {
-    "name": "Ac_K_Genius",
-    "displayname": "Genius",
-    "description": "www.genius.com - Plug-in by Ac_K",
-    "version": "1.04",
-    "site": "http://www.genius.com",
-    "module": "lyric.php",
+    "name": "ImFx_DarkLyrics",
+    "displayname": "DarkLyrics",
+    "description": "www.darklyrics.com - Plugin by Im[F(x)]",
+    "version": "2024.01",
+    "site": "http://www.darklyrics.com/",
+    "module": "ImFxDarkLyrics.php",
     "type": "lyric",
-    "class": "Ac_KGenius"
+    "class": "ImFxDarkLyrics"
 }
 
