@@ -5,23 +5,33 @@ spl_autoload_register(function ($class_name) {
 
 class ImFxDarkLyrics
 {
-    private $sitePrefix = 'http://www.darklyrics.com';
-    private $DEBUG = false;
+    private static $DEBUG;
+    private static $sitePrefix;
+    private static $cacheFile;
 
     public function __construct()
     {
-        if (session_status() === PHP_SESSION_NONE) {
-            session_start();
-        }
+        self::$DEBUG = false;
+        self::$sitePrefix = 'http://www.darklyrics.com';
+        self::$cacheFile = dirname(__FILE__) . DIRECTORY_SEPARATOR . 'cache.dat';
     }
 
     public function getLyricsList($artist, $title, $info)
     {
+        $this->ensureSession();
         return $this->search($info, $artist, $title);
     }
     public function getLyrics($id, $info)
     {
+        $this->ensureSession();
         return $this->get($info, $id);
+    }
+
+    public function ensureSession()
+    {
+        if (session_status() === PHP_SESSION_NONE) {
+            session_start();
+        }
     }
 
     public function search($handle, $artist, $title)
@@ -33,14 +43,14 @@ class ImFxDarkLyrics
 
         $search_url = sprintf(
             "%s/search?q=%s",
-            $this->sitePrefix, urlencode(sprintf('%s %s', $normalized_artist, $normalized_title))
+            self::$sitePrefix, urlencode(sprintf('%s %s', $normalized_artist, $normalized_title))
         );
 
         $lastvisitts = self::calculateLastVisitCookie();
         $headers = array('Cookie: lastvisitts='.$lastvisitts . '; PHPSESSID='.session_id());
         $content = ImFxCommon::getContent($search_url, $headers);
         if (!$content) {
-            if ($this->DEBUG) {
+            if (self::$DEBUG) {
                 $handle->addTrackInfoToList(
                     $normalized_artist,
                     $normalized_title,
@@ -66,7 +76,7 @@ class ImFxDarkLyrics
             );
         }
 
-        if ($this->DEBUG && !$count) {
+        if (self::$DEBUG && !$count) {
             $handle->addTrackInfoToList(
                 $normalized_artist,
                 $normalized_title,
@@ -83,13 +93,21 @@ class ImFxDarkLyrics
     {
         $lyric = '';
 
-        if ($this->DEBUG) {
-            $lyric = sprintf("DEBUG\n%s\n", $id);
+        if (self::$DEBUG) {
+            $ts = filemtime(self::$cacheFile);
+            $cookie = file_get_contents(self::$cacheFile);
+            $lyric = sprintf(
+                "DEBUG\n%s\n%s\n%s\n",
+                $ts . ' / ' . $cookie,
+                self::$sitePrefix,
+                $id
+                );
+
             $handle->addLyrics($lyric, $id);
             return true;
         }
 
-        $url = sprintf("%s/%s", $this->sitePrefix, $id);
+        $url = sprintf("%s/%s", self::$sitePrefix, $id);
 
         $content = ImFxCommon::getContent($url);
         if (!$content) {
@@ -216,29 +234,39 @@ class ImFxDarkLyrics
     }
 
     private function calculateLastVisitCookie() {
-        /*
-        var lastvisitts = 'Nergal' + Math.ceil(new Date().getTime() / (60 * 60 * 6 * 1000)).toString();
-        var lastvisittscookie = 0;
-        for (var i = 0; i < lastvisitts.length; i++) {
-            lastvisittscookie = ((lastvisittscookie << 5) - lastvisittscookie) + lastvisitts.charCodeAt(i);
-            lastvisittscookie = lastvisittscookie & lastvisittscookie;
-        }
-        document.cookie = 'lastvisitts=' + lastvisittscookie + '; domain=.darklyrics.com; path=/';
+        /** ----{ COOKIE CALCULATION FROM DARKLYRICS JAVASCRIPT }----
+        *   var lastvisitts = 'Nergal' + Math.ceil(new Date().getTime() / (60 * 60 * 6 * 1000)).toString();
+        *   var lastvisittscookie = 0;
+        *   for (var i = 0; i < lastvisitts.length; i++) {
+        *       lastvisittscookie = ((lastvisittscookie << 5) - lastvisittscookie) + lastvisitts.charCodeAt(i);
+        *       lastvisittscookie = lastvisittscookie & lastvisittscookie;
+        *   }
+        *   document.cookie = 'lastvisitts=' + lastvisittscookie + '; domain=.darklyrics.com; path=/';
         */
 
-        // replica to the above calculations from DarkLyrics script
-        $ts = sprintf('Nergal%s', ( ceil(time() / (60 * 60 * 6)) )); // time in seconds, hence skip division by 1000
+        // calculate the custom timestamp
+        $ts = ceil(time() / (3600 * 6)); // getting time in seconds, hence skipping division by 1000
+
+        // use cached cookie from file
+        if (file_exists(self::$cacheFile) && filemtime(self::$cacheFile) > ($ts - 1) * (3600 * 6)) {
+            return file_get_contents(self::$cacheFile);
+        }
+
+        // replica to the above calculations from DarkLyrics javascript
+        $ts_str = sprintf('Nergal%s', $ts);
         $cookie = 0;
 
-        $ts_len = strlen($ts);
-        for ($i = 0; $i < $ts_len; $i++) {
+        $ts_strlen = strlen($ts_str);
+        for ($i = 0; $i < $ts_strlen; $i++) {
             $shift_val = $cookie << 5;
             $shift_val = $shift_val & 0xffffffff;                                   // limit to DWORD
             if ($shift_val > 0x7fffffff) $shift_val = $shift_val - 0xffffffff - 1;  // simulate DWORD overflow
-            $cookie = ($shift_val - $cookie) + ord(substr($ts, $i, 1));
+            $cookie = ($shift_val - $cookie) + ord(substr($ts_str, $i, 1));
             $cookie = $cookie & 0xffffffff;                                         // limit to DWORD
             if ($cookie > 0x7fffffff) $cookie = $cookie - 0xffffffff - 1;           // simulate DWORD overflow
         }
+
+        file_put_contents(self::$cacheFile, $cookie, LOCK_EX);
 
         return $cookie;
     }
