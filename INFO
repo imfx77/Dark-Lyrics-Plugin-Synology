@@ -2,7 +2,7 @@
     "name": "ImFx_DarkLyrics",
     "displayname": "DarkLyrics",
     "description": "www.darklyrics.com - Plugin by Im[F(x)]",
-    "version": "2024.01",
+    "version": "2024.02",
     "site": "http://www.darklyrics.com/",
     "module": "ImFxDarkLyrics.php",
     "type": "lyric",

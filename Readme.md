@@ -12,7 +12,7 @@ Enjoy 🤘
 Requirements
 ------------
 
-The Synology Audio Station tries to fetch the **"artist name"** and **"song title"** for the chosen song and pass them to the plugin, which in turn uses them to make a search request for lyrics online.
+The sandbox of the lyrics plugin is rather old and its functionality and API are quite simple and restricted. Those apparently haven't been changed since 2013, and the chance to get some enhancement or improvement from Synology after all these years is next to none. The Synology Audio Station just tries to fetch the **"artist name"** and **"song title"** for the song being played and pass them to the plugin - which then, in turn, uses them to make a search request for lyrics online and return some text to the AS sandbox.
 So, please, make sure that:
 
 * You have an Internet connection that is visible to the Synology NAS.
@@ -29,7 +29,7 @@ Installation
 3. Click on **Add**, browse to the downloaded plugin file, select it and add it.
 4. Check the **Enabled** box in front of the added plugin.
 5. If you have multiple plugins, reorder them in the desired priority. If lyrics are not found by the first active one AS will try the next one available and so on.
-6. When you download a new version of a plugin, you may either remove the old one, or simply deactivate it, or keep all plugin versions active but manage their order.
+6. When you download a new version of a lyrics plugin, you don't need to remove the old one, but rather directly add the new version and just confirm overwriting when promted.
 7. In order for a change of the plugins configuration to take effect you may need to refresh the AS session (e.g. logout and login again, but usually a simple refresh of the browser page is sufficient)
 
 * Ready to go!
@@ -72,6 +72,7 @@ The version denotes the date of the build at which the plugin was compatible and
 As the site's search functionality, lyrics formatting or cookies policy may change over time, so should the plugin in order to match those changes, thus new versions will be issued.
 
 * **2024.01** : `Initial Release`
+* **2024.02** : `impl caching for the cookie so to reduce the complex calculations on each request`
 
 Manual Packing of AUM
 ---------------------
