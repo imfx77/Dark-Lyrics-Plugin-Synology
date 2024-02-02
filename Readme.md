@@ -1,3 +1,35 @@
+<p align="center">
+    <a href="https://github.com/imfx77/Dark-Lyrics-Plugin-Synology/releases">
+        <img src="https://img.shields.io/github/v/release/imfx77/Dark-Lyrics-Plugin-Synology?style=for-the-badge&color=brightgreen" alt="GitHub Latest Release (by date)" title="GitHub Latest Release (by date)">
+    </a>
+    <a href="https://github.com/imfx77/Dark-Lyrics-Plugin-Synology/releases">
+        <img src="https://img.shields.io/github/downloads/imfx77/Dark-Lyrics-Plugin-Synology/total?style=for-the-badge&color=orange" alt="GitHub All Releases" title="GitHub All Downloads">
+    </a>
+    <a href="https://github.com/imfx77/Dark-Lyrics-Plugin-Synology/releases">
+        <img src="https://img.shields.io/github/directory-file-count/imfx77/Dark-Lyrics-Plugin-Synology?style=for-the-badge&color=orange" alt="GitHub Repository File Count" title="GitHub Repository File Count">
+    </a>
+    <a href="https://github.com/imfx77/Dark-Lyrics-Plugin-Synology/releases">
+        <img src="https://img.shields.io/github/repo-size/imfx77/Dark-Lyrics-Plugin-Synology?style=for-the-badge&color=orange" alt="GitHub Repository Size" title="GitHub Repository Size">
+    </a>
+    <a href="https://github.com/imfx77/Dark-Lyrics-Plugin-Synology/releases">
+        <img src="https://img.shields.io/github/languages/code-size/imfx77/Dark-Lyrics-Plugin-Synology?style=for-the-badge&color=orange" alt="GitHub Code Size" title="GitHub Code Size">
+    </a>
+</p>
+<p align="center">
+    <a href="https://github.com/imfx77/Dark-Lyrics-Plugin-Synology/discussions">
+        <img src="https://img.shields.io/github/discussions/imfx77/Dark-Lyrics-Plugin-Synology?style=for-the-badge&color=blue" alt="GitHub Discussions" title="Read Discussions">
+    </a>
+    <a href="https://github.com/imfx77/Dark-Lyrics-Plugin-Synology/compare">
+        <img src="https://img.shields.io/github/commits-since/imfx77/Dark-Lyrics-Plugin-Synology/latest?include_prereleases&style=for-the-badge&color=blue" alt="GitHub Commits Since Last Release" title="GitHub Commits Since Last Release">
+    </a>
+    <a href="https://github.com/imfx77/Dark-Lyrics-Plugin-Synology/compare">
+        <img src="https://img.shields.io/github/commit-activity/m/imfx77/Dark-Lyrics-Plugin-Synology?style=for-the-badge&color=blue" alt="GitHub Commit Monthly Activity" title="GitHub Commit Monthly Activity">
+    </a>
+</p>
+
+-------
+
+
 DarkLyrics.com Lyrics Plugin for Synology Audio Station
 =======================================================
 
@@ -96,3 +128,29 @@ Credits
 * **Ac_K** for [Genius Lyrics Plugin](https://github.com/AcK77/Genius-Lyrics-Plugin-Synology), I am actually not using a bit of it, yet originally forked from it.
 * **Frank Lai** for the source code of [Fujirou Lyrics Plugins](https://github.com/franklai/synologylyric/tree/master/src) which are the main reference.
 * The [Lyrics Module Development Guide](https://global.download.synology.com/download/Document/DeveloperGuide/AS_Guide.pdf) for **Synology Audio Station**, the PDF is also included in the [**/doc**](https://github.com/imfx77/Dark-Lyrics-Plugin-Synology/tree/master/doc) folder of this repo.
+
+-------
+
+<p align="center">
+    <a href="https://github.com/imfx77/Dark-Lyrics-Plugin-Synology/stargazers" title="View Stargazers">
+        <img src="https://img.shields.io/github/stars/imfx77/Dark-Lyrics-Plugin-Synology?logo=github&style=flat-square" alt="Dark-Lyrics-Plugin-Synology">
+    </a>
+    <a href="https://github.com/imfx77/Dark-Lyrics-Plugin-Synology/forks" title="See Forks">
+        <img src="https://img.shields.io/github/forks/imfx77/Dark-Lyrics-Plugin-Synology?logo=github&style=flat-square" alt="Dark-Lyrics-Plugin-Synology">
+    </a>
+    <a href="https://github.com/imfx77/Dark-Lyrics-Plugin-Synology/blob/master/LICENSE" title="Read License">
+        <img src="https://img.shields.io/github/license/imfx77/Dark-Lyrics-Plugin-Synology?style=flat-square" alt="Dark-Lyrics-Plugin-Synology">
+    </a>
+    <a href="https://github.com/imfx77/Dark-Lyrics-Plugin-Synology/issues" title="Open Issues">
+        <img src="https://img.shields.io/github/issues-raw/imfx77/Dark-Lyrics-Plugin-Synology?style=flat-square" alt="Dark-Lyrics-Plugin-Synology">
+    </a>
+    <a href="https://github.com/imfx77/Dark-Lyrics-Plugin-Synology/issues?q=is%3Aissue+is%3Aclosed" title="Closed Issues">
+        <img src="https://img.shields.io/github/issues-closed/imfx77/Dark-Lyrics-Plugin-Synology?style=flat-square" alt="Dark-Lyrics-Plugin-Synology">
+    </a>
+    <a href="https://github.com/imfx77/Dark-Lyrics-Plugin-Synology/discussions" title="Read Discussions">
+        <img src="https://img.shields.io/github/discussions/imfx77/Dark-Lyrics-Plugin-Synology?style=flat-square" alt="Dark-Lyrics-Plugin-Synology">
+    </a>
+    <a href="https://github.com/imfx77/Dark-Lyrics-Plugin-Synology/compare/" title="Latest Commits">
+        <img alt="GitHub commits since latest release (by date)" src="https://img.shields.io/github/commits-since/imfx77/Dark-Lyrics-Plugin-Synology/latest?style=flat-square">
+    </a>
+</p>
