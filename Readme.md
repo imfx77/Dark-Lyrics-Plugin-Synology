@@ -2,6 +2,8 @@
     <a href="https://github.com/imfx77/Dark-Lyrics-Plugin-Synology/releases">
         <img src="https://img.shields.io/github/v/release/imfx77/Dark-Lyrics-Plugin-Synology?style=for-the-badge&color=brightgreen" alt="GitHub Latest Release (by date)" title="GitHub Latest Release (by date)">
     </a>
+</p>
+<p align="center">
     <a href="https://github.com/imfx77/Dark-Lyrics-Plugin-Synology/releases">
         <img src="https://img.shields.io/github/downloads/imfx77/Dark-Lyrics-Plugin-Synology/total?style=for-the-badge&color=orange" alt="GitHub All Releases" title="GitHub All Downloads">
     </a>
