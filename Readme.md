@@ -58,7 +58,7 @@ So, please, make sure that:
 Installation
 ------------
 
-1. Download the latest **ImFx_DarkLyrics-XXXX.XX.aum** from the [**/dist**](https://github.com/imfx77/Dark-Lyrics-Plugin-Synology/tree/master/dist) folder of the repo.
+1. Download the latest **ImFx_DarkLyrics-XXXX.XX.aum** from the [**Releases**](https://github.com/imfx77/Dark-Lyrics-Plugin-Synology/releases) page of the repo.
 2. Open **Audio Station**, make sure you login with account that has **Admin** privileges, go to **Settings**, select **Lyrics Plugin** tab.
 3. Click on **Add**, browse to the downloaded plugin file, select it and add it.
 4. Check the **Enabled** box in front of the added plugin.
@@ -100,7 +100,7 @@ Please, read the following explanations, and try resolving the problems on your 
 Releases
 --------
 
-Please, refer the [**/dist**](https://github.com/imfx77/Dark-Lyrics-Plugin-Synology/tree/master/dist) folder of this repo for latest builds.
+Please, refer the [**Releases**](https://github.com/imfx77/Dark-Lyrics-Plugin-Synology/releases) page of this repo for latest builds.
 
 The version denotes the date of the build at which the plugin was compatible and correctly working against the DarkLyrics site.
 As the site's search functionality, lyrics formatting or cookies policy may change over time, so should the plugin in order to match those changes, thus new versions will be issued.
