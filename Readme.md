@@ -43,6 +43,8 @@ Me too, for quite a while. And since there wasn't any, I eventually made this on
 
 Enjoy 🤘
 
+If you like it and use it, please, give a ⭐ !
+
 Requirements
 ------------
 
