@@ -1,9 +1,17 @@
+<h1 align="center">DarkLyrics.com Lyrics Plugin for Synology Audio Station</h1>
+
 <p align="center">
     <a href="https://github.com/imfx77/Dark-Lyrics-Plugin-Synology/releases">
         <img src="https://img.shields.io/github/v/release/imfx77/Dark-Lyrics-Plugin-Synology?style=for-the-badge&color=brightgreen" alt="GitHub Latest Release (by date)" title="GitHub Latest Release (by date)">
     </a>
+    <a href="https://github.com/imfx77/Dark-Lyrics-Plugin-Synology/blob/master/LICENSE" title="Read License">
+        <img src="https://img.shields.io/github/license/imfx77/Dark-Lyrics-Plugin-Synology?style=for-the-badge" alt="Dark-Lyrics-Plugin-Synology">
+    </a>
 </p>
 <p align="center">
+    <a href="https://github.com/imfx77/Dark-Lyrics-Plugin-Synology/stargazers" title="View Stargazers">
+        <img src="https://img.shields.io/github/stars/imfx77/Dark-Lyrics-Plugin-Synology?logo=github&style=for-the-badge" alt="Dark-Lyrics-Plugin-Synology">
+    </a>
     <a href="https://github.com/imfx77/Dark-Lyrics-Plugin-Synology/releases">
         <img src="https://img.shields.io/github/downloads/imfx77/Dark-Lyrics-Plugin-Synology/total?style=for-the-badge&color=orange" alt="GitHub All Releases" title="GitHub All Downloads">
     </a>
@@ -30,10 +38,6 @@
 </p>
 
 -------
-
-
-DarkLyrics.com Lyrics Plugin for Synology Audio Station
-=======================================================
 
 Wazzup, metalheads?
 
