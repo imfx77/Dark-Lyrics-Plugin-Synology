@@ -10,7 +10,7 @@
 </p>
 <p align="center">
     <a href="https://github.com/imfx77/Dark-Lyrics-Plugin-Synology/stargazers" title="View Stargazers">
-        <img src="https://img.shields.io/github/stars/imfx77/Dark-Lyrics-Plugin-Synology?logo=github&style=for-the-badge" alt="Dark-Lyrics-Plugin-Synology">
+        <img src="https://img.shields.io/github/stars/imfx77/Dark-Lyrics-Plugin-Synology?logo=github&style=for-the-badge&color=orange" alt="Dark-Lyrics-Plugin-Synology">
     </a>
     <a href="https://github.com/imfx77/Dark-Lyrics-Plugin-Synology/releases">
         <img src="https://img.shields.io/github/downloads/imfx77/Dark-Lyrics-Plugin-Synology/total?style=for-the-badge&color=orange" alt="GitHub All Releases" title="GitHub All Downloads">
